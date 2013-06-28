@@ -54,6 +54,8 @@ public abstract class CommonShareActivity extends CommonActivity {
 
 	protected abstract void onLoggingIn(int requestId);
 
+	protected abstract void onLoginFailure();
+
 	@SuppressWarnings({ "unchecked", "serial" })
 	public void login(int requestId) {
 
@@ -156,6 +158,7 @@ public abstract class CommonShareActivity extends CommonActivity {
 
 			toast(getErrorMessage());
 			setProgressBarIndeterminateVisibility(false);
+			onLoginFailure();
 		}
 
 	}

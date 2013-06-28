@@ -300,5 +300,10 @@ public class SubscribeActivity extends CommonShareActivity {
 			return m_items.size();
 		}
 	}
-	
+
+	@Override
+	protected void onLoginFailure() {
+		// TODO Auto-generated method stub
+		
+	}
 }

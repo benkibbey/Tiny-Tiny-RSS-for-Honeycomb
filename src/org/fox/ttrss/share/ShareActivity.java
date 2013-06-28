@@ -143,4 +143,10 @@ public class ShareActivity extends CommonShareActivity {
 			postData();									
 		}
 	}
+
+	@Override
+	protected void onLoginFailure() {
+		// TODO Auto-generated method stub
+		
+	}
 }
