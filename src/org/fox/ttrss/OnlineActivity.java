@@ -1027,7 +1027,7 @@ public class OnlineActivity extends CommonActivity {
 					}
 				}
 			};
-	
+
 			final String articleIds = articlesToIdString(articles);
 	
 			@SuppressWarnings("serial")
@@ -1041,6 +1041,12 @@ public class OnlineActivity extends CommonActivity {
 				}
 			};
 			req.execute(map);
+
+			boolean rtf = m_prefs.getBoolean("return_to_feeds", false);
+			if (rtf) {
+				onBackPressed();
+				return;
+			}
 		}
 	}
 
