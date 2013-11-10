@@ -80,12 +80,7 @@ public class TaskerReceiver extends BroadcastReceiver {
 			String login = prefs.getString("login", "").trim();
 			String password = prefs.getString("password", "").trim();
 			
-			if (login.equals("") || password.equals("")) {
-				Toast toast = Toast.makeText(fContext, "Could not download articles: not configured?", Toast.LENGTH_SHORT);
-				toast.show();
-			} else {				
-				loginMgr.logIn(context, 1, login, password);
-			}			
+			loginMgr.logIn(context, 1, login, password);
 		}
 	}
 
